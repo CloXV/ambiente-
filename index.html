@@ -445,7 +445,7 @@ p{ line-height:1.5; color:var(--ink-soft); font-size:1.18rem; }
   .process-slide .visual-card img{min-height:9.7rem !important;height:9.7rem !important;object-fit:cover;}
   .process-slide p{font-size:.91rem !important;line-height:1.22 !important;margin:.27rem 0 !important;}
 }
-
+  
 /* ==========================================
    ADAPTACIÓN COMPLETA PARA CELULARES
    Conserva el diseño original en PC/proyector
@@ -989,6 +989,26 @@ p{ line-height:1.5; color:var(--ink-soft); font-size:1.18rem; }
   .progress-track {
     height: 3px;
   }
+  
+/* Móvil: controles arriba, lejos de la marca de Netlify */
+@media screen and (max-width: 600px) {
+  .controls {
+    top: max(1rem, env(safe-area-inset-top));
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 100;
+  }
+
+  .controls.visible {
+    transform: translate(-50%, 0);
+  }
+
+  .slide {
+    padding-top: 5.5rem;
+  }
+}
+
 }
 </style>
 </head>
